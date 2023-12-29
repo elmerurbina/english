@@ -1,5 +1,8 @@
-body{
-background-image: url("../images/default.jpg");
+body{background-color: white;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+/*background-image: url("../images/default.jpg"); */
 background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -7,20 +10,26 @@ background-size: cover;
 
 }
 
-h1{color:chartreuse;
+h1{color:blue;
 font-size: 25px;
 margin-bottom: 8%;}
 
-p{color:white;
+p{color: black;
 margin-top: 4%;
-font-size: 18px;}
+font-size: 18px;
+line-height: 2.0;
+margin-left: 10%;
+margin-right: 10%;}
 
-p.test{color:rgb(130, 227, 253);
-font-size: 25px;}
+p.test{color:rgb(12, 202, 255);
+font-size: 18px;
+line-height: 2.0;
+margin-left: 10%;
+margin-right: 10%;}
 
 
 
-a{color: rgb(12, 243, 12);
+a{color: darkgreen;
     font-size: 17px;}
 a:hover{color:darkorange;
 }
