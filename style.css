@@ -2,7 +2,7 @@ body{background-color: white;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
-/*background-image: url("../images/default.jpg"); */
+
 background-size: cover; 
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -21,8 +21,8 @@ line-height: 2.0;
 margin-left: 10%;
 margin-right: 10%;}
 
-p.test{color:rgb(12, 202, 255);
-font-size: 18px;
+p.test{color:blue;
+font-size: 20px;
 line-height: 2.0;
 margin-left: 10%;
 margin-right: 10%;}

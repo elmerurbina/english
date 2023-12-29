@@ -1,65 +1,71 @@
 const questionsContainer = document.getElementById('questions-container');
 
-const questions = [
+const preguntas = [
     {
-        question: 'She, He, It, pertenecen a: ',
-        options: ['First person', 'Third person',  'Second person'],
-        correctAnswer: 'Third person',
-        feedback: 'Correct! The correct answer is: Third person.'
+        pregunta: '¿Cuándo deben usarse los pronombres de sujeto en una oración?',
+        opciones: ['Al principio de la oración', 'Después de un verbo o preposición', 'Al final de la oración'],
+        respuestaCorrecta: 'Al principio de la oración',
+        retroalimentacion: '¡Correcto! La respuesta correcta es: Al principio de la oración.'
     },
 
-   { question: 'Cual de los siguientes enunciados es el correcto? ',
-        options: ['It is colorful', 'He write', 'She studies'],
-        correctAnswer: 'She studies',
-        feedback: 'Correct! The answers is: She studies'
-   },
+    { 
+        pregunta: 'Selecciona la oración correcta que utiliza un pronombre de objeto:',
+        opciones: ['You are learning English.', 'Send us an email.', 'I studies'],
+        respuestaCorrecta: 'Send us an email.',
+        retroalimentacion: '¡Correcto! La respuesta es: Send us an email.'
+    },
 
-   {
-    question: 'I, She, You, He, son pronombres de tipo:  ',
-    options: ['Subject pronouns', 'Third person', 'Object pronouns'],
-    correctAnswer: 'Subject pronouns',
-    feedback: 'Correct! Those pronouns are: Subject pronouns.'
-},
+    {
+        pregunta: 'Explica la diferencia entre los pronombres posesivos y los determinantes posesivos.',
+        opciones: ['Los posesivos modifican el sustantivo, mientras que los determinantes no.', 'Ambos expresan posesión pero en diferentes contextos.', 'Los determinantes se usan al final de una oración.'],
+        respuestaCorrecta: 'Ambos expresan posesión pero en diferentes contextos.',
+        retroalimentacion: '¡Correcto! Los pronombres posesivos expresan posesión sin modificar el sustantivo, mientras que los determinantes se usan antes de un sustantivo para mostrar a quién pertenece algo.'
+    },
 
-{
-    question: 'La primera persona del plural es?',
-    options: ['I', 'Them', 'We'],
-    correctAnswer: 'We',
-    feedback: 'Correct! The correct answer is: We'
-},
+    {
+        pregunta: '¿Cuál es la función de los pronombres demostrativos?',
+        opciones: ['Expresar posesión o pertenencia.', 'Señalar objetos o personas en el espacio o en el tiempo.', 'Modificar un verbo.'],
+        respuestaCorrecta: 'Señalar objetos o personas en el espacio o en el tiempo.',
+        retroalimentacion: '¡Correcto! Los pronombres demostrativos se utilizan para señalar objetos o personas en el espacio o en el tiempo.'
+    },
 
-{
-    question: 'La tercera persona del singular es: ',
-    options: ['a. He-She-It', 'b. I-You', 'c. They'],
-    correctAnswer: 'a. He-She-It',
-    feedback: 'Correct! The correct answer is: a'
-},
+    {
+        pregunta: '¿En qué contexto se utilizan los pronombres reflexivos?',
+        opciones: ['Cuando el sujeto y el objeto de la acción son diferentes.', 'Cuando el sujeto y el objeto de la acción son la misma persona.', 'Solo al final de una oración.'],
+        respuestaCorrecta: 'Cuando el sujeto y el objeto de la acción son la misma persona.',
+        retroalimentacion: '¡Correcto! Los pronombres reflexivos se utilizan cuando el sujeto y el objeto de la acción son la misma persona.'
+    },
 
+    {
+        pregunta: 'Explica el uso de "who", "whom" y "whose" en oraciones.',
+        opciones: ['"Who" se utiliza para referirse a la persona mencionada, "whom" en contextos formales y "whose" como posesivo.', '"Who" se utiliza solo al final de una oración, "whom" para referirse a una persona previamente mencionada y "whose" para objetos.', '"Who", "whom" y "whose" significan lo mismo y son intercambiables.'],
+        respuestaCorrecta: '"Who" se utiliza para referirse a la persona mencionada, "whom" en contextos formales y "whose" como posesivo.',
+        retroalimentacion: '¡Correcto! "Who", "whom" y "whose" tienen funciones específicas: "who" para la persona mencionada, "whom" en contextos formales y "whose" como posesivo.'
+    },
 
-{
-    question: 'Selecciona la opcion que corresponda al Oubject Pronoun de la tercera persona del singular: ',
-    options: ['him-her-it', 'them', 'me'],
-    correctAnswer: 'him-her-it',
-    feedback: 'Correct! The correct answer is: him-her-it'
-},
+    {
+        pregunta: '¿Qué función cumplen los pronombres interrogativos?',
+        opciones: ['Se utilizan para expresar posesión o pertenencia.', 'Sirven para unir dos oraciones relacionadas.', 'Se utilizan para formular preguntas.'],
+        respuestaCorrecta: 'Se utilizan para formular preguntas.',
+        retroalimentacion: '¡Correcto! Los pronombres interrogativos se utilizan para formular preguntas.'
+    },
 
+    {
+        pregunta: 'Explica el uso de los pronombres indefinidos.',
+        opciones: ['Se refieren a una persona, lugar o cosa de manera específica.', 'Tienen reglas de uso estrictas y no pueden intercambiarse.', 'Se refieren a una persona, lugar o cosa de manera no específica.'],
+        respuestaCorrecta: 'Se refieren a una persona, lugar o cosa de manera no específica.',
+        retroalimentacion: '¡Correcto! Los pronombres indefinidos se utilizan para referirse a una persona, lugar o cosa de manera no específica.'
+    },
 
-{
-    question: 'En las siguientes opciones selecciona la opcion que correspondea al Possesive Pronoun del pronombre El: ',
-    options: ['He', 'His', 'Her'],
-    correctAnswer: 'His',
-    feedback: 'Correct! The correct answer is: His'
-},
-
-
-{
-    question: 'Para que se utilizan los pronombres personales: ',
-    options: ['a. Para referirse a alguien o algo', 'b. Describen animales personas o cosas', 'Son terminos especiales'],
-    correctAnswer: 'a. Para referirse a alguien o algo',
-    feedback: 'Correct! The correct answer is: a'
-},
-    // Add more questions as needed
+    {
+        pregunta: 'Explica la diferencia entre "either" y "neither".',
+        opciones: ['"Either" se utiliza cuando hay más de dos opciones, mientras que "neither" se usa para dos opciones.', '"Either" y "neither" son sinónimos y pueden intercambiarse en cualquier contexto.', '"Either" se utiliza para ambas opciones y "neither" para ninguna de las opciones.'],
+        respuestaCorrecta: '"Either" se utiliza cuando hay más de dos opciones, mientras que "neither" se usa para dos opciones.',
+        retroalimentacion: '¡Correcto! "Either" se utiliza cuando hay más de dos opciones, mientras que "neither" se usa para referirse a dos opciones.'
+    },
+    // Agrega más preguntas según sea necesario
 ];
+
 
 function generateQuestions() {
     questions.forEach((q, index) => {
