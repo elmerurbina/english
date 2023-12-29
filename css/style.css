@@ -1,0 +1,26 @@
+body{
+background-image: url("../images/default.jpg");
+background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+
+}
+
+h1{color:chartreuse;
+font-size: 25px;
+margin-bottom: 8%;}
+
+p{color:white;
+margin-top: 4%;
+font-size: 18px;}
+
+p.test{color:rgb(130, 227, 253);
+font-size: 25px;}
+
+
+
+a{color: rgb(12, 243, 12);
+    font-size: 17px;}
+a:hover{color:darkorange;
+}

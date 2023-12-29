@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.question {
+    margin-bottom: 10px;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+.question{margin-top: 5%;}
+
+button{border-radius: 20px;
+background-color: green;
+padding: 12px;
+margin-top: 5%;
+}
+
+button:hover{background-color:red}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
