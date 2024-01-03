@@ -1,4 +1,4 @@
-body{background-color: white;
+body{background-image: url('index.jpg');
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
@@ -10,26 +10,31 @@ background-size: cover;
 
 }
 
-h1{color:blue;
+h1{color:white;
 font-size: 25px;
 margin-bottom: 8%;}
 
-p{color: black;
+p{color:snow;
 margin-top: 6%;
 font-size: 18px;
 line-height: 2.0;
 margin-left: 10%;
 margin-right: 10%;}
 
-p.test{color:blue;
-font-size: 20px;
+p.test{color:rgb(11, 247, 11);
+font-size: 25px;
 line-height: 2.0;
 margin-left: 10%;
 margin-right: 10%;}
 
 
 
-a{color: darkgreen;
-    font-size: 17px;}
+a{color: yellow;
+    font-size: 22px;}
 a:hover{color:darkorange;
 }
+
+footer{margin-top: 8%;
+color:rgb(241, 149, 29);
+font-size: 16px;
+margin-bottom: 500px;}

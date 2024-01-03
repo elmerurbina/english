@@ -63,9 +63,8 @@ const questions = [
         correctAnswer: '"Either" se utiliza cuando hay más de dos opciones, mientras que "neither" se usa para dos opciones.',
         feedback: '¡Correcto! "Either" se utiliza cuando hay más de dos opciones, mientras que "neither" se usa para referirse a dos opciones.'
     },
-    // Agrega más preguntas según sea necesario
+   
 ];
-
 
 function generateQuestions() {
     questions.forEach((q, index) => {
@@ -86,7 +85,7 @@ function checkAnswers() {
         userAnswers.push({
             question: q.question,
             answer: selectedOption ? selectedOption.value : 'Not answered',
-            isCorrect: selectedOption && selectedOption.value === q.correctAnswer
+            isCorrect: selectedOption && selectedOption.value === q.correctAnswer,
         });
     });
     displayResults(userAnswers);
@@ -94,18 +93,26 @@ function checkAnswers() {
 
 function displayResults(userAnswers) {
     questionsContainer.innerHTML = '';
+    let correctCount = 0;
+
     userAnswers.forEach((ua, index) => {
         const questionDiv = document.createElement('div');
         questionDiv.classList.add('question');
         if (ua.isCorrect) {
+            correctCount++;
             questionDiv.classList.add('correct');
             questionDiv.innerHTML = `<p>${index + 1}. ${ua.question}</p><p>Your Answer: ${ua.answer}</p><p>${questions[index].feedback}</p>`;
         } else {
             questionDiv.classList.add('incorrect');
-            questionDiv.innerHTML = `<p>${index + 1}. ${ua.question}</p><p>Your Answer: ${ua.answer}</p><p>Incorrect. The correct answer is: ${questions[index].correctAnswer}</p>`;
+            questionDiv.innerHTML = `<p>${index + 1}. ${ua.question}</p><p>Your Answer: ${ua.answer}</p><p>Incorrect. La respuesta correcta es: ${questions[index].correctAnswer}</p>`;
         }
         questionsContainer.appendChild(questionDiv);
     });
+
+    const scoreDiv = document.createElement('div');
+    scoreDiv.classList.add('score');
+    scoreDiv.innerHTML = `<p>Your Score: ${correctCount}/${userAnswers.length}</p>`;
+    questionsContainer.appendChild(scoreDiv);
 }
 
 generateQuestions();
