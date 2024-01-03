@@ -1,0 +1,38 @@
+body {
+    background-image: url('eagle.jpg');
+    font-family: Arial, sans-serif;
+    
+background-size: cover; 
+background-repeat: no-repeat;
+background-attachment: fixed;
+    color: blue;
+    
+}
+
+.question {
+    margin-bottom: 8%;
+    margin-top: 5%;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+.question{margin-top: 5%;}
+
+button{border-radius: 20px;
+background-color: green;
+padding: 12px;
+margin-top: 5%;
+margin-bottom: 30%;
+}
+
+button:hover{background-color:red}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
