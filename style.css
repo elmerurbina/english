@@ -1,4 +1,4 @@
-body{background-image: url('index.jpg');
+body{ background: linear-gradient(to right, rgb(0, 0, 255), rgb(255, 255, 255), rgb(255, 0, 0));
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
@@ -10,18 +10,18 @@ background-size: cover;
 
 }
 
-h1{color:white;
+h1{color: #02232e;
 font-size: 25px;
 margin-bottom: 8%;}
 
-p{color:snow;
+p{color:#333;
 margin-top: 6%;
 font-size: 18px;
 line-height: 2.0;
 margin-left: 10%;
 margin-right: 10%;}
 
-p.test{color:rgb(11, 247, 11);
+p.test{color:rgb(2, 63, 2);
 font-size: 25px;
 line-height: 2.0;
 margin-left: 10%;
@@ -29,12 +29,12 @@ margin-right: 10%;}
 
 
 
-a{color: yellow;
+a{color: #00f;
     font-size: 22px;}
 a:hover{color:darkorange;
 }
 
 footer{margin-top: 8%;
-color:rgb(241, 149, 29);
+color:black;
 font-size: 16px;
 margin-bottom: 500px;}
